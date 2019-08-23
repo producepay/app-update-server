@@ -1,9 +1,10 @@
 {
   "name": "hazel-server",
   "version": "3.0.5",
-  "main": "lib/index.js",
+  "main": "lib/server.js",
   "description": "Lightweight update server for Electron apps",
   "scripts": {
+    "start": "micro -l tcp://0.0.0.0:$PORT",
     "dev": "micro-dev lib/server.js",
     "test": "xo && jest",
     "precommit": "lint-staged"
